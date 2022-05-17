@@ -1,0 +1,198 @@
+:root{
+    --button-color:#01a3c7;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    margin: 20px auto;
+   
+}
+
+body{
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container{
+
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .2rem;
+    padding: 15px;
+    gap: 15px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-color: white;
+}
+
+.container > header > h2{
+    text-align: center;
+    color: var(--button-color);
+    letter-spacing: 2px;
+}
+
+.text-meme{
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-meme > div{
+    display: flex;
+    gap: 20px;
+}
+
+.text_size{
+    width: 100%;
+    display: flex;
+    
+}
+
+.text_size > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.text_size > div > span{
+    text-align: left;
+    font-size: .9rem;
+    color: #696969;
+}
+input[type='text']{
+    width: 100%;
+}
+
+input[type='range']::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #696969;
+
+}
+
+input[type='range']{
+    cursor: pointer;
+    width: 100%;
+    appearance: none;
+    background-color: var(--button-color);
+
+    -webkit-appearance: none;
+    appearance: none;
+   
+    height: .5rem;
+    border-radius: 5px;
+    outline: none;
+}
+
+.color-text > button{
+    width: 20px;
+    height: 20px;
+    border-radius: .1rem;
+    border: 1px solid #696969;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.color-text > button:active{
+    border: 2px solid black;
+}
+.my-canvas{
+    width: 100%;
+    max-width: 500px;
+    max-height: 800px;
+
+    background-color: #696969;
+    border-radius: .2rem;
+}
+
+#top_text-result{
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    color: white;
+    font-size: 2.5rem;
+    transform: translate(-50%, 50%);
+}
+
+#bottom_text-result{
+    position: absolute;
+    bottom:3px;
+    left: 50%;
+    color: white;
+    font-size: 2.3rem;
+    transform: translate(-50%, -50%);
+}
+
+.meme-generator{
+    
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: stretch;
+  
+}
+
+.meme-generator > label{
+    display: flex;
+    align-items: center;
+    background: var(--button-color);  /* fallback for old browsers */
+    padding: 0 .5rem;
+    color: white;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: .2s ease;
+}
+
+
+.image-url > input[type='text'], .text-meme > div > input{
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    color: #696969;
+    border-bottom: 1px solid var(--button-color);
+}
+
+.save_meme-container{
+    display: flex;
+    align-items: stretch;
+}
+.save_meme-container > button{
+    padding: 0 .5rem;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: .2rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .2s ease;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.save_meme-container > button:hover, .meme-generator > label:hover{
+    background-color: #0083B0;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .container{
+        width: 95%;
+    }
+    
+    .meme-generator > label, .save_meme-container > button{
+        font-size: .7rem;
+    }
+}

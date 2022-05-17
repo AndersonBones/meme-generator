@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meme Generator</title>
+
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="https://img.icons8.com/fluency/48/000000/monkas.png" type="image/x-icon">
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+
+        <main class="container">
+            <header>
+                <h2>MEME GENERATOR</h2>
+            </header>
+
+            <div class="text-meme">
+                <div class="input_text">
+                    <input type="text" id="top-text" placeholder="Top text">
+                    <input type="text" id="bottom-text" placeholder="Bottom text">
+                </div>
+                
+                <div class="text_size">
+                    <div class="top_text-size">
+                        <span id="top_text-SizeResult">Top text: 10</span>
+                        <input type="range" id="top_text-Size" min="10" max="50" step="1">
+                    </div>
+                    
+                    <div class="bottom_text-size">
+                        <span id="bottom_text-SizeResult">Bottom text: 10</span>
+                        <input type="range" id="bottom_text-Size" min="10" max="50" step="1">
+                    </div>
+                    
+                </div>
+
+                <div class="color-text">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button ></button>
+                </div>
+
+            </div>
+
+            <canvas class="my-canvas">
+
+            </canvas>
+            
+
+            <div class="meme-generator">
+                <label for="file-image">UPLOAD IMAGE</label>
+                <input style="border: none;" accept="image/png, image/jpeg, image/gif"   type="file" id="file-image" hidden>
+
+                <div class="image-url">
+                    <input type="text" id="image-address" placeholder="Link to image">
+                </div>
+
+
+                <div class="save_meme-container">
+                    <button id="save-meme" onclick="Download_meme()">DOWNLOAD</button>
+                </div>
+            </div>
+
+            
+        </main>
+            
+       
+        
+    </body>
+</html>
